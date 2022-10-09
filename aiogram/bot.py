@@ -10,15 +10,15 @@ sys.path.append('../')
 from telethon_bot_files import parse
 from telethon_bot_files import spam
 
-bot = Bot(token="5374802153:AAG_qURFhXPCrAKihtCF63p6RfX92Q-vwVY")
+bot = Bot(token="")
 storage = MemoryStorage()
 dp = Dispatcher(bot, storage=storage)
 delay = 0
 class States(StatesGroup):
     start = State()
-    get_chat_link_for_username = State()  # Will be represented in storage as 'States:name'
-    get_chat_link_for_phone = State()  # Will be represented in storage as 'States:age'
-    get_chat_link_for_id = State()  # Will be represented in storage as 'States:gender'
+    get_chat_link_for_username = State()
+    get_chat_link_for_phone = State()
+    get_chat_link_for_id = State()  
     wait_for_file = State()
     text_video = State()
     text_voice = State()
